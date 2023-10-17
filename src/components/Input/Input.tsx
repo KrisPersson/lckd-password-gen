@@ -12,25 +12,6 @@
 import { useState } from 'react';
 import './Input.scss';
 
-type InputProps = {
-  label: string;
-  htmlFor: string;
-  fieldType?: string;
-};
-
-export function Input(props: InputProps) {
-  return (
-    <form className="input-wrapper">
-      <div className="input-sign">
-        <label htmlFor={props.htmlFor} className="input-sign-text">
-          {props.label}
-        </label>
-      </div>
-      <InsertTypeOfField {...props} />
-    </form>
-  );
-}
-
 function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
   const [isPasswordMasked, setIsPasswordMasked] = useState(true);
 
@@ -75,3 +56,22 @@ function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
 }
 
 function generatePassword() {}
+
+type InputProps = {
+  label: string;
+  htmlFor: string;
+  fieldType?: string;
+};
+
+export function Input(props: InputProps) {
+  return (
+    <form className="input-wrapper">
+      <div className="input-sign">
+        <label htmlFor={props.htmlFor} className="input-sign-text">
+          {props.label}
+        </label>
+      </div>
+      <InsertTypeOfField {...props} />
+    </form>
+  );
+}
