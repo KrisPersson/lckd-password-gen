@@ -1,6 +1,7 @@
 import './Header.scss';
 import logo from '/assets/Logo.svg';
-import { Button } from '../Button/Button';
+import Button from '../Button/Button';
+
 interface Props {
   isLoggedIn: boolean;
 }
