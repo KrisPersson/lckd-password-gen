@@ -29,7 +29,6 @@
 
 .input-text-field-wrapper {
     display: flex;
-
 }
 
 .input-text-field {
@@ -58,25 +57,19 @@
 .icon-pwd-hidden {
     width: 20%;
     background:
-    no-repeat
-    center
-    url('../../assets/pwd_hidden.png');
+        no-repeat center url('../../assets/pwd_hidden.png');
 }
 
 .icon-pwd-visible {
     width: 20%;
     background:
-    no-repeat
-    center
-    url('../../assets/pwd_visible.png');
+        no-repeat center url('../../assets/pwd_visible.png');
 }
 
 .icon-gen-pwd {
     width: 20%;
     background:
-    no-repeat
-    center
-    url('../../assets/pwd_generate.png');
+        no-repeat center url('../../assets/pwd_generate.png');
 }
 
 .big-dots {
