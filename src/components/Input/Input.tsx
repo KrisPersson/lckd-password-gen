@@ -63,7 +63,7 @@ type InputProps = {
   fieldType?: string;
 };
 
-export function Input(props: InputProps) {
+export default function Input(props: InputProps) {
   return (
     <form className="input-wrapper">
       <div className="input-sign">
