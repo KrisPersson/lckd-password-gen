@@ -1,6 +1,7 @@
 import './MainView.scss';
 import { Header } from '../../components/Header/Header';
 import { List } from '../../components/List/List';
+import { Footer } from '../../components/Footer/Footer';
 import { useState } from 'react';
 
 const fakeItemsFromDb = [
@@ -47,6 +48,7 @@ export function MainView() {
         showPassword={showPassword}
         itemsFromDb={fakeItemsFromDb}
       />
+      <Footer />
     </div>
   );
 }
