@@ -7,13 +7,15 @@ export function List({
   itemsFromDb,
   setShowPassword,
   showPassword,
+  selectedItem,
+  setSelectedItem,
 }: {
   itemsFromDb: DatabaseSavedItem[];
   setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
   showPassword: boolean;
+  selectedItem: string;
+  setSelectedItem: React.Dispatch<React.SetStateAction<string>>;
 }) {
-  const [selectedItem, setSelectedItem] = useState<string>('');
-
   const renderedListItems = itemsFromDb.map((item) => {
     const { savedUrl, savedUsername, savedPassword, id } = item;
     return (
