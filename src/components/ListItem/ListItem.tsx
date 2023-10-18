@@ -27,7 +27,7 @@ export function ListItem({
     >
       <span className="list-item__url-text">{formattedUrl}</span>
       <span className="list-item__eye-section">
-        {isSelected && <img src="/assets/edit-item-icon.svg" alt="" />}
+        {isSelected && <img className="icon-edit" src="/assets/edit-item-icon.svg" alt="" />}
         <img
           className="icon-eye"
           src={`/assets/eye-${isSelected && showPassword ? 'open' : 'closed'}-icon.svg`}
