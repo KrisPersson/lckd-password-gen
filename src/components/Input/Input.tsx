@@ -11,7 +11,7 @@
 
 import { useState } from 'react';
 import './Input.scss';
-
+import { generatePassword } from '../../utils/password-gen';
 function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
   const [isPasswordMasked, setIsPasswordMasked] = useState(true);
 
@@ -54,8 +54,6 @@ function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
     return <input type="text" id={htmlFor} className="input-text-field" />;
   }
 }
-
-function generatePassword() {}
 
 type InputProps = {
   label: string;
