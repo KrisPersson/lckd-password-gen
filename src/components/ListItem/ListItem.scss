@@ -1,0 +1,50 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+
+.list-item {
+    width: 29.5rem;
+    height: 5.9rem;
+    border: 1px solid $yellow;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+    cursor: default;
+
+    &__url-text {
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 400;
+        @include mainFont;
+        color: $yellow;
+        border-right: 1px solid $yellow;
+        width: 23.5rem;
+        height: 100%;
+        @include center;
+        overflow: hidden;
+    }
+
+    &__eye-section {
+        @include center;
+        width: 5.97rem;
+
+        .icon-eye {
+            width: 3rem;
+        }
+    }
+
+    &--selected {
+        border-color: $white;
+
+        .list-item__url-text {
+            color: $white;
+            border-color: $white;
+            width: 19.6rem;
+        }
+        .list-item__eye-section {
+            width: 9.9rem;
+            justify-content: space-evenly;
+        }
+
+    }
+}
