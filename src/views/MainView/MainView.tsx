@@ -1,6 +1,7 @@
 import './MainView.scss';
 import { Header } from '../../components/Header/Header';
 import { List } from '../../components/List/List';
+import { useState } from 'react';
 
 const fakeItemsFromDb = [
   {
@@ -36,10 +37,16 @@ const fakeItemsFromDb = [
 ];
 
 export function MainView() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="view view--main">
       <Header isLoggedIn={true} />
-      <List itemsFromDb={fakeItemsFromDb} />
+      <List
+        setShowPassword={setShowPassword}
+        showPassword={showPassword}
+        itemsFromDb={fakeItemsFromDb}
+      />
     </div>
   );
 }
