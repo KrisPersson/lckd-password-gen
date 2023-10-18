@@ -43,11 +43,13 @@ export function MainView() {
   return (
     <div className="view view--main">
       <Header isLoggedIn={true} />
-      <List
-        setShowPassword={setShowPassword}
-        showPassword={showPassword}
-        itemsFromDb={fakeItemsFromDb}
-      />
+      <section className="view-mid-section">
+        <List
+          setShowPassword={setShowPassword}
+          showPassword={showPassword}
+          itemsFromDb={fakeItemsFromDb}
+        />
+      </section>
       <Footer />
     </div>
   );
