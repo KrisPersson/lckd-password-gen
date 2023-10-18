@@ -16,12 +16,15 @@ export function Header(props: Props) {
       ) : (
         <div className="header login">
           <Button
-            width="8.6rem"
-            height="3.8rem"
+            width="fit-content"
+            height="fit-content"
             radius="0.3rem"
             border="solid 0.1rem #ff4910"
             backgroundColor="transparent"
             color="#ff4910"
+            fontFamily="PT Mono"
+            fontWeight="400"
+            padding="0.3rem 0.6rem 0 0.6rem"
             onClick={() => console.log('Login')}
           >
             Sign up

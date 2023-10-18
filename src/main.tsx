@@ -5,11 +5,17 @@ import './index.scss';
 import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import { MainView } from './views/MainView/MainView';
+import LoginView from './views/LoginView/LoginView.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainView />,
+    errorElement: <Error />,
+  },
+  {
+    path: '/login',
+    element: <LoginView />,
     errorElement: <Error />,
   },
 ]);

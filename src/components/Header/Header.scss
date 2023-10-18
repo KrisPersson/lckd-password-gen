@@ -1,3 +1,6 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
 .header {
   display: flex;
   justify-content: flex-start;
@@ -14,7 +17,8 @@
 
 .login {
   justify-content: flex-end;
-  padding: 2rem 4rem 0 0;
+  padding: 2rem 2rem 0 0;
+  align-self: flex-start;
 }
 
 .logo__title {
