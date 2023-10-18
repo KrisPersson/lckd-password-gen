@@ -1,7 +1,6 @@
 import './Header.scss';
 import logo from '/assets/Logo.svg';
 import Button from '../Button/Button';
-
 interface Props {
   isLoggedIn: boolean;
 }
@@ -23,6 +22,7 @@ export function Header(props: Props) {
             border="solid 0.1rem #ff4910"
             backgroundColor="transparent"
             color="#ff4910"
+            onClick={() => console.log('Login')}
           >
             Sign up
           </Button>
