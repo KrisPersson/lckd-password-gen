@@ -77,6 +77,7 @@ export function MainView() {
         <PasswordDisplay showPassword={showPassword} password={passwordToBeDisplayed} />
       </section>
       <Footer
+        buttonText="NEW LCKD"
         width="31.1rem"
         height="6.2rem"
         radius="0.8rem"
