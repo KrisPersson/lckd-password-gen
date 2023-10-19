@@ -4,10 +4,14 @@ import Input from '../../components/Input/Input';
 import './LoginView.scss';
 import logotype from '../../assets/Logo.png';
 
+function clickSignUp() {
+  console.log("Det fungerar!");
+}
+
 export default function LoginView() {
   return (
     <div className="view">
-      <Header isLoggedIn={false} />
+      <Header isLoggedIn={false} clickSignUp={clickSignUp()}/>
       <article className="login-main">
         <section className="login-logo-slogan">
           <img className="login-logo" src={logotype} alt="LCKD logotype"></img>
