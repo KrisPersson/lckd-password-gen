@@ -1,7 +1,6 @@
 import './List.scss';
 import { ListItem } from '../ListItem/ListItem';
 import { DatabaseSavedItem } from '../../types/index';
-import { useState } from 'react';
 
 export function List({
   itemsFromDb,
