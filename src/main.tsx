@@ -10,13 +10,11 @@ import LoginView from './views/LoginView/LoginView.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainView />,
-    errorElement: <Error />,
+    element: <MainView />
   },
   {
     path: '/login',
-    element: <LoginView />,
-    errorElement: <Error />,
+    element: <LoginView />
   },
 ]);
 

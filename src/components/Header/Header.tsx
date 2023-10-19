@@ -22,9 +22,9 @@ export function Header(props: Props) {
             border="solid 0.1rem #ff4910"
             backgroundColor="transparent"
             color="#ff4910"
-            fontFamily="PT Mono"
+            fontFamily="Open Sans"
             fontWeight="400"
-            padding="0.3rem 0.6rem 0 0.6rem"
+            padding="0.3rem 0.6rem 0.3rem 0.6rem"
             onClick={() => console.log('Login')}
           >
             Sign up

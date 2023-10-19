@@ -1,0 +1,56 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+* {
+    @include mainFont;
+}
+
+.login-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-logo-slogan {
+    width: 100%;
+    height: 50%;
+    @include center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.login-h1 {
+    font-size: 4.4rem;
+    font-weight: 700;
+    letter-spacing: .6rem;
+    margin: .5rem 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.login-h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    margin: 0;
+    text-align: center;
+    text-wrap: balance;
+    color: $yellow;
+}
+
+.login-input-fields {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#user-wrapper {
+    margin-top: 2rem;
+}
+
+#pwd-wrapper {
+    margin-top: 2rem;
+}
