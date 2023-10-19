@@ -35,6 +35,9 @@ export function List({
 
   return (
     <ul className="list">
+      <div className="input-sign">
+        <label className="input-sign-text">STORED PASSWORDS</label>
+      </div>
       {itemsFromDb.length > 0 ? (
         renderedListItems
       ) : (

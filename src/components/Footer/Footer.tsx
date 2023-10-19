@@ -8,15 +8,15 @@ export function Footer(props: Props) {
   return (
     <div className="footer">
       <Button
-        width="8.6rem"
-        height="3.8rem"
-        radius="0.3rem"
-        border="solid 0.1rem #ff4910"
-        backgroundColor="transparent"
-        color="#ff4910"
-        onClick={() => console.log('Login')}
+        width="31.1rem"
+        height="6.2rem"
+        radius="0.8rem"
+        border="none"
+        backgroundColor="white"
+        color="rgba(21, 8, 95, 1)"
+        onClick={() => console.log('Navigate to CreateItemView')}
       >
-        Sign up
+        NEW LCKD
       </Button>
     </div>
   );
