@@ -2,6 +2,12 @@ import './Footer.scss';
 import Button from '../Button/Button';
 interface Props {
   buttonText: string;
+  color?: string;
+  backgroundColor?: string;
+  width?: string;
+  height?: string;
+  radius?: string;
+  border?: string;
   onClick: () => void;
 }
 

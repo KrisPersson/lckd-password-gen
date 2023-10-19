@@ -74,7 +74,7 @@ export function MainView() {
           setSelectedItem={setSelectedItem}
           handleEditItem={handleEditItem}
         />
-        <PasswordDisplay showPassword={showPassword} password={passwordToBeDisplayed} />
+        <PasswordDisplay showPassword={showPassword} password={passwordToBeDisplayed || ''} />
       </section>
       <Footer
         buttonText="NEW LCKD"

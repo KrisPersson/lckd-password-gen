@@ -3,8 +3,8 @@ import { DatabaseSavedItem } from '../../types/index';
 
 export function ListItem({
   savedUrl,
-  savedUsername,
-  savedPassword,
+  // savedUsername,
+  // savedPassword,
   id,
   setSelectedItem,
   selectedItem,
