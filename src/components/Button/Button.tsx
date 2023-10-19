@@ -8,7 +8,7 @@ interface ButtonProps {
   height?: string;
   radius?: string;
   border?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
