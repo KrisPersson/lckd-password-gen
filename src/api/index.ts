@@ -25,7 +25,7 @@ export async function apiSignUp(body: IUserLoginSignup) {
 export async function apiLogin(body: IUserLoginSignup) {
     try {
         const response = await fetch(BASE_URL + "/user/login", {
-            method: "GET",
+            method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(body)
         })
