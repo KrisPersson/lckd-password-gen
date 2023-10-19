@@ -1,10 +1,7 @@
 const BASE_URL = 'https://icqrnuluvc.execute-api.eu-north-1.amazonaws.com/api'
-import { DatabaseSavedItem, INewItem } from "../types/index"
+import { DatabaseSavedItem, INewItem, IUserLoginSignup } from "../types/index"
 
-interface IUserLoginSignup {
-    username: string;
-    password: string;
-}
+
 
 // USER
 

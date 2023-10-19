@@ -10,3 +10,8 @@ export interface INewItem {
     savedUsername: string;
     savedPassword: string;
 }
+
+export interface IUserLoginSignup {
+    username: string;
+    password: string;
+}
