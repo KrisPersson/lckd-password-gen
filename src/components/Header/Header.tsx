@@ -26,7 +26,7 @@ export function Header(props: Props) {
             fontFamily="Open Sans"
             fontWeight="400"
             padding="0.3rem 0.6rem 0.3rem 0.6rem"
-            onClick={() => console.log('Login')}
+            onClick={props.onClick}
           >
             Sign up
           </Button>

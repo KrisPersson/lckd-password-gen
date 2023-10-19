@@ -1,15 +1,25 @@
 import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
+import { apiSignUp, apiLogin } from '../../api/index';
 import Input from '../../components/Input/Input';
 import './LoginView.scss';
-import logotype from '../../../public/assets/Logo.svg'
+import logotype from '/assets/Logo.svg';
 
 function clickSignUp() {
-  console.log('Det fungerar!');
+  console.log('Signup-knappen funkar!');
 }
 
 function clickLogin() {
-  console.log('Det fungerar!');
+  // apiLogin({
+  //   username: user,
+  //   password: pwd,
+  // });
+  
+  console.log("Footer-knappen funkar!");
+}
+
+function getFieldValues(values: { username: string, password: string }) {
+  console.log(values);
 }
 
 export function LoginView() {
@@ -24,7 +34,11 @@ export function LoginView() {
         </section>
         <section className="login-input-fields">
           <div id="user-wrapper">
-            <Input label="USERNAME" htmlFor="login-user-field" fieldType="login" />
+            <Input
+              label="USERNAME"
+              htmlFor="login-user-field"
+              fieldType="login"
+            />
           </div>
           <div id="pwd-wrapper">
             <Input label="PASSWORD" htmlFor="login-pwd-field" fieldType="pwd" />
