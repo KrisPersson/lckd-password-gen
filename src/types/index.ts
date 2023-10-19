@@ -5,3 +5,8 @@ export interface DatabaseSavedItem {
     savedPassword: string;
     id: string;
 }
+export interface INewItem {
+    savedUrl: string;
+    savedUsername: string;
+    savedPassword: string;
+}
