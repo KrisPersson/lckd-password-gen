@@ -1,10 +1,20 @@
 import './Footer.scss';
 import Button from '../Button/Button';
+interface Props {
+  buttonText: string;
+  color?: string;
+  backgroundColor?: string;
+  width?: string;
+  height?: string;
+  radius?: string;
+  border?: string;
+  onClick: () => void;
+}
 
 export function Footer() {
   return (
     <div className="footer">
-      <Button onClick={() => console.log('Login')}>LET ME IN</Button>
+      <Button {...props}>{props.buttonText}</Button>
     </div>
   );
 }

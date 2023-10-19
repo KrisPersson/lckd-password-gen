@@ -31,6 +31,15 @@
         .icon-eye {
             width: 3rem;
         }
+        .icon-edit {
+            width: 3rem;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        .icon-edit:hover {
+            opacity: 1;
+
+        }
     }
 
     &--selected {

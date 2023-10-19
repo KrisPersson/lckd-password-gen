@@ -14,12 +14,41 @@ import './Input.scss';
 import { generatePassword } from '../../utils/password-gen';
 function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
   const [isPasswordMasked, setIsPasswordMasked] = useState(true);
+  const [generatedPassword, setGeneratedPassword] = useState(
+    generatePassword({
+      length: 16,
+      uppercase: true,
+      lowercase: true,
+      numbers: true,
+      symbols: true,
+      strict: true,
+    }),
+  );
 
   if (fieldType === 'genPwd') {
     return (
       <div className="input-text-field-wrapper add-border">
-        <input type="text" id={htmlFor} className="input-text-field remove-border" />
-        <div className="icon-gen-pwd" onClick={() => generatePassword()}></div>
+        <input
+          type="text"
+          id={htmlFor}
+          className="input-text-field remove-border"
+          value={generatedPassword}
+        />
+        <div
+          className="icon-gen-pwd"
+          onClick={() =>
+            setGeneratedPassword(
+              generatePassword({
+                length: 16,
+                uppercase: true,
+                lowercase: true,
+                numbers: true,
+                symbols: true,
+                strict: true,
+              }),
+            )
+          }
+        ></div>
       </div>
     );
   } else if (fieldType === 'pwd') {
@@ -59,6 +88,7 @@ type InputProps = {
   label: string;
   htmlFor: string;
   fieldType?: string;
+  value?: string;
 };
 
 export default function Input(props: InputProps) {
