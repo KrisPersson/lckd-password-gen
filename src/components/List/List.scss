@@ -14,13 +14,20 @@
     position: relative;
     @include mainFont;
 
-    @include midSection;
 
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+
+    .input-sign {
+        position: absolute;
+        left: -1px;;
+        top: -2.3rem;
+        background-color: $yellow !important;
+
+    }
 }
 
 .no-saved-passwords {

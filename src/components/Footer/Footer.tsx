@@ -2,13 +2,13 @@ import './Footer.scss';
 import Button from '../Button/Button';
 interface Props {
   buttonText: string;
-  gatherData: () => void;
+  onClick: () => void;
 }
 
 export function Footer(props: Props) {
   return (
     <div className="footer">
-      <Button onClick={props.gatherData}>{props.buttonText}</Button>
+      <Button {...props}>{props.buttonText}</Button>
     </div>
   );
 }
