@@ -1,0 +1,14 @@
+openapi: 3.0.0
+info:
+  title: lckd-api
+  description: Ett api till för att hämta och spara data för lckd-password-gen appen
+  version: 0.1.0
+
+  servers:
+    - url: http://test1
+    - description: Hämta användardata
+    - url: http://test2
+    - description: Spara användardata
+
+paths:
+  

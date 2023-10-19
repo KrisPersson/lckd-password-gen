@@ -1,0 +1,1 @@
+const Crypto = require ('cryptojs');
