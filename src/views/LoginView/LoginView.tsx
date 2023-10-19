@@ -2,16 +2,20 @@ import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
 import Input from '../../components/Input/Input';
 import './LoginView.scss';
-import logotype from '../../assets/Logo.png';
+import logotype from '../../../public/assets/Logo.svg'
 
 function clickSignUp() {
-  console.log("Det fungerar!");
+  console.log('Det fungerar!');
 }
 
-export default function LoginView() {
+function clickLogin() {
+  console.log('Det fungerar!');
+}
+
+export function LoginView() {
   return (
     <div className="view">
-      <Header isLoggedIn={false} clickSignUp={clickSignUp()}/>
+      <Header isLoggedIn={false} onClick={clickSignUp} />
       <article className="login-main">
         <section className="login-logo-slogan">
           <img className="login-logo" src={logotype} alt="LCKD logotype"></img>
@@ -27,7 +31,7 @@ export default function LoginView() {
           </div>
         </section>
       </article>
-      <Footer />
+      <Footer buttonText="LET ME IN" onClick={clickLogin} />
     </div>
   );
 }

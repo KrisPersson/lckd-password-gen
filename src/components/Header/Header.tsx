@@ -3,6 +3,7 @@ import logo from '/assets/Logo.svg';
 import Button from '../Button/Button';
 interface Props {
   isLoggedIn: boolean;
+  onClick: () => void;
 }
 
 export function Header(props: Props) {

@@ -11,7 +11,7 @@ interface Props {
   onClick: () => void;
 }
 
-export function Footer() {
+export function Footer(props: Props) {
   return (
     <div className="footer">
       <Button {...props}>{props.buttonText}</Button>
