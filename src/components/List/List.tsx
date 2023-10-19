@@ -7,13 +7,17 @@ export function List({
   itemsFromDb,
   setShowPassword,
   showPassword,
+  selectedItem,
+  setSelectedItem,
+  handleEditItem,
 }: {
   itemsFromDb: DatabaseSavedItem[];
   setShowPassword: React.Dispatch<React.SetStateAction<boolean>>;
   showPassword: boolean;
+  selectedItem: string;
+  setSelectedItem: React.Dispatch<React.SetStateAction<string>>;
+  handleEditItem: (id: string) => void;
 }) {
-  const [selectedItem, setSelectedItem] = useState<string>('');
-
   const renderedListItems = itemsFromDb.map((item) => {
     const { savedUrl, savedUsername, savedPassword, id } = item;
     return (
@@ -27,12 +31,16 @@ export function List({
         selectedItem={selectedItem}
         showPassword={showPassword}
         setShowPassword={setShowPassword}
+        handleEditItem={handleEditItem}
       />
     );
   });
 
   return (
     <ul className="list">
+      <div className="input-sign">
+        <label className="input-sign-text">STORED PASSWORDS</label>
+      </div>
       {itemsFromDb.length > 0 ? (
         renderedListItems
       ) : (

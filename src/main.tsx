@@ -5,12 +5,26 @@ import './index.scss';
 import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import { MainView } from './views/MainView/MainView';
+import { LoginView } from './views/LoginView/LoginView';
+import { CreateItemView } from './views/CreateItemView/CreateItemView';
+import { EditItemView } from './views/EditItemView/EditItemView';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainView />,
-    errorElement: <Error />,
+  },
+  {
+    path: '/login',
+    element: <LoginView />,
+  },
+  {
+    path: '/new',
+    element: <CreateItemView />,
+  },
+  {
+    path: '/edit',
+    element: <EditItemView />,
   },
 ]);
 

@@ -1,7 +1,11 @@
+@import "../../scss/mixins";
 
 
-.view--main {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10rem 1fr 10rem;
+
+.view-mid-section {
+    @include midSection;
+    @include center;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 }
+
