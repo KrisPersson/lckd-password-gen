@@ -6,33 +6,38 @@ import Input from '../../components/Input/Input';
 import './LoginView.scss';
 import logotype from '/assets/Logo.svg';
 
-function clickSignUp() {
-  console.log('Signup-knappen funkar!');
-}
-
-function clickLogin() {
-  // apiLogin({
-  //   username: user,
-  //   password: pwd,
-  // });
-
-  console.log('Footer-knappen funkar!');
-}
-
-function getFieldValues(values: { username: string; password: string }) {
-  console.log(values);
-}
-
 export function LoginView() {
-  // let userRef =
-  // <input onChange={(event) => setUsernameInput(event.currentTarget.value)}       type='text' />
-  // <input onChange={(event) => setPasswordInput(event.currentTarget.value)}         type='password' />
+  let usernameInput: string;
+  let passwordInput: string;
 
-  // async function handleClick() {
-  //   await apiLogin({username: usernameInput, password: passwordInput})
-  // }
   function onChangeInInputField(event: React.ChangeEvent<HTMLInputElement>) {
-    console.log(event.target.value);
+    event.currentTarget.id === 'login-user-field'
+      ? (usernameInput = event.target.value)
+      : (passwordInput = event.target.value);
+  }
+
+  async function clickLogin() {
+    if (
+      usernameInput.length < 4 ||
+      usernameInput.length > 20 ||
+      passwordInput.length < 6 ||
+      passwordInput.length > 100
+    ) {
+      console.log('Username or password too short or too long.');
+      return;
+    }
+
+    const result = await apiLogin({ username: usernameInput, password: passwordInput });
+    console.log(result);
+
+    console.log('Du är nu inloggad.');
+  }
+
+  async function clickSignUp() {
+    const result = await apiSignUp({ username: usernameInput, password: passwordInput });
+    console.log(result);
+
+    console.log('Signup-knappen funkar!');
   }
 
   return (

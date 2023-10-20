@@ -76,6 +76,7 @@ function InsertTypeOfField({ htmlFor, fieldType, onChange }: InputProps) {
           defaultValue=""
           ref={passwordInput}
           onChange={(e) => onChange && onChange(e)}
+
         />
         <div
           className={iconType}
