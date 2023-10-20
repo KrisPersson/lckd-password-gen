@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
 import { apiSignUp, apiLogin } from '../../api/index';
@@ -14,15 +15,26 @@ function clickLogin() {
   //   username: user,
   //   password: pwd,
   // });
-  
-  console.log("Footer-knappen funkar!");
+
+  console.log('Footer-knappen funkar!');
 }
 
-function getFieldValues(values: { username: string, password: string }) {
+function getFieldValues(values: { username: string; password: string }) {
   console.log(values);
 }
 
 export function LoginView() {
+  // let userRef =
+  // <input onChange={(event) => setUsernameInput(event.currentTarget.value)}       type='text' />
+  // <input onChange={(event) => setPasswordInput(event.currentTarget.value)}         type='password' />
+
+  // async function handleClick() {
+  //   await apiLogin({username: usernameInput, password: passwordInput})
+  // }
+  function onChangeInInputField(event: React.ChangeEvent<HTMLInputElement>) {
+    console.log(event.target.value);
+  }
+
   return (
     <div className="view">
       <Header isLoggedIn={false} onClick={clickSignUp} />
@@ -38,10 +50,16 @@ export function LoginView() {
               label="USERNAME"
               htmlFor="login-user-field"
               fieldType="login"
+              onChange={onChangeInInputField}
             />
           </div>
           <div id="pwd-wrapper">
-            <Input label="PASSWORD" htmlFor="login-pwd-field" fieldType="pwd" />
+            <Input
+              label="PASSWORD"
+              htmlFor="login-pwd-field"
+              fieldType="pwd"
+              onChange={onChangeInInputField}
+            />
           </div>
         </section>
       </article>

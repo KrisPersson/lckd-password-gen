@@ -9,11 +9,13 @@
  * Fullständigt exempel: <Input label="PASSWORD" htmlFor="login-pwd-field" fieldType="pwd" />
  */
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './Input.scss';
 import { generatePassword } from '../../utils/password-gen';
 
-function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
+function InsertTypeOfField({ htmlFor, fieldType, onChange }: InputProps) {
+  const usernameInput = useRef(null);
+  const passwordInput = useRef(null);
   const [isPasswordMasked, setIsPasswordMasked] = useState(true);
   const [generatedPassword, setGeneratedPassword] = useState(
     generatePassword({
@@ -71,6 +73,9 @@ function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
           type={textOrDots}
           id={htmlFor}
           className={`input-text-field remove-border ${maskedOrNot}`}
+          defaultValue=""
+          ref={passwordInput}
+          onChange={(e) => onChange && onChange(e)}
         />
         <div
           className={iconType}
@@ -81,7 +86,16 @@ function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
       </div>
     );
   } else {
-    return <input type="text" id={htmlFor} className="input-text-field" />;
+    return (
+      <input
+        type="text"
+        id={htmlFor}
+        className="input-text-field"
+        defaultValue=""
+        ref={usernameInput}
+        onChange={(e) => onChange && onChange(e)}
+      />
+    );
   }
 }
 
@@ -90,6 +104,7 @@ type InputProps = {
   htmlFor: string;
   fieldType?: string;
   value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function Input(props: InputProps) {
