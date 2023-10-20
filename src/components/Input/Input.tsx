@@ -14,16 +14,7 @@ import './Input.scss';
 import { generatePassword } from '../../utils/password-gen';
 function InsertTypeOfField({ htmlFor, fieldType }: InputProps) {
   const [isPasswordMasked, setIsPasswordMasked] = useState(true);
-  const [generatedPassword, setGeneratedPassword] = useState(
-    generatePassword({
-      length: 16,
-      uppercase: true,
-      lowercase: true,
-      numbers: true,
-      symbols: true,
-      strict: true,
-    }),
-  );
+  const [generatedPassword, setGeneratedPassword] = useState<string>('');
 
   if (fieldType === 'genPwd') {
     return (

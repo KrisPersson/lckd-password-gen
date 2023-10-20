@@ -16,7 +16,7 @@ export function CreateItemView() {
           <Input label="SECURE PASSWORD" htmlFor="SECURE PASSWORD" fieldType="genPwd" />
         </div>
       </div>
-      <Footer buttonText="CREATE LCKD " onClick={getDataFromInputsAndSave} />
+      <Footer buttonText="CREATE LCKD" onClick={getDataFromInputsAndSave} />
     </div>
   );
 }
